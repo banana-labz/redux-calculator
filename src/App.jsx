@@ -49,7 +49,9 @@ const wasLastDotInSameWord = str => {
 
 export const App =() => {
     const [ calcString, setCalcString] = useState("")
-    
+
+    const sounds = DIGITS.map(i => new Audio(`../../sounds/${i}.mp3`))
+
     return (
         <div className="main">
             <img src={logo} alt="logo" />
@@ -60,12 +62,15 @@ export const App =() => {
                 onChange={event => setCalcString(event.target.value)
             }/>
             <div className="main__button-container">
-                {DIGITS.map(number => 
+                {DIGITS.map(i => 
                     <button
-                        onClick={() =>setCalcString(calcString + number)} 
+                        onClick={() => {
+                            sounds[i].play()
+                            setCalcString(calcString + i)
+                        }} 
                         disabled={last(calcString) === ")"}
                     >
-                        {number}
+                        {i}
                     </button>
                 )}
                 {BINARY_OPERATORS.map(operator => {

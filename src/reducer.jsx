@@ -17,6 +17,8 @@ const reducer = (state = "", { type, payload : char }) => {
             return state + char
         case "REMOVE":
             return state.substring(0, state.length - 1)
+        case "CLEAR":
+            return ""
         default:
             return state;
     }

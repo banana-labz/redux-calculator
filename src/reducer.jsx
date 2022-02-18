@@ -1,6 +1,6 @@
 const PRECISION = 4
 
-const reducer = (state = "", { type, payload : char }) => {
+export const reducer = (state = "", { type, payload : char }) => {
     switch (type) {
         case "COMPUTE": {
             const result = eval(state)
@@ -23,5 +23,3 @@ const reducer = (state = "", { type, payload : char }) => {
             return state;
     }
 }
-
-export default reducer

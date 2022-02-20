@@ -1,3 +1,3 @@
-﻿Несподівано, калькулятор 🤨. Фотокартка:
- 
-![](https://i.imgur.com/BQuGPhu.png)
+Just a calculator. Plays cool piano sounds when you click them buttons.
+
+![](https://i.imgur.com/CS4ueOu.png)

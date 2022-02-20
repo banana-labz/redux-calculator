@@ -4,7 +4,7 @@ export const reducer = (state = "", { type, payload : char }) => {
     switch (type) {
         case "COMPUTE": {
             try {
-                const result = eval(state.replace(/[^-()\d/*+.]/g, ''))
+                const result = eval(state)
                 if (result) {
                     const power = Math.pow(10, PRECISION)
                     const output = Math.round(result * power + Number.EPSILON * power) / power

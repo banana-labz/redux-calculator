@@ -3,13 +3,15 @@ const PRECISION = 4
 export const reducer = (state = "", { type, payload : char }) => {
     switch (type) {
         case "COMPUTE": {
-            const result = eval(state.replace(/[^-()\d/*+.]/g, ''))
-            if (result) {
-                const power = Math.pow(10, PRECISION)
-                const output = Math.round(result * power + Number.EPSILON * power) / power
-                return output.toString()
+            try {
+                const result = eval(state.replace(/[^-()\d/*+.]/g, ''))
+                if (result) {
+                    const power = Math.pow(10, PRECISION)
+                    const output = Math.round(result * power + Number.EPSILON * power) / power
+                    return output.toString()
+                }
             }
-            else {
+            finally {
                 return state
             }
         }

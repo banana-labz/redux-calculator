@@ -28,4 +28,7 @@
     height: auto;
     font-family: 'Digital-7';
     font-size: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 295px;
 }

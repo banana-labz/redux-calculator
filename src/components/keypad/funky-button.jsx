@@ -11,8 +11,7 @@ export const FunkyButton = ({ char, add }) => {
     }
 
     return (
-        <CustomButton 
-            key={`button{${char}}`}
+        <CustomButton
             onClick={onClick}
             className="button-normal"
         >

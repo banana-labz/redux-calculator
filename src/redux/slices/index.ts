@@ -1,1 +1,1 @@
-export { clear, add, remove } from "./expressionSlice"
+export { clear, add, remove, compute } from "./expressionSlice"

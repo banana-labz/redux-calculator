@@ -1,10 +1,12 @@
 import React from "react"
+import ReactDOM from "react-dom/client"
 
-import { createRoot } from "react-dom/client"
+import "antd/dist/antd.css"
+import App from "./components/App"
 
-const App = () => <div>redux</div>
-
-const root = createRoot(document.getElementById("root")!)
+const root = ReactDOM.createRoot(
+  document.getElementById("root")!
+)
 
 root.render(
   <React.StrictMode>

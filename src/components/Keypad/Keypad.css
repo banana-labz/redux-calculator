@@ -1,0 +1,15 @@
+.keypad-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.keypad-layout__zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.keypad-layout__equals {
+  height: calc(5px + 200%);
+  /* 5px = gap + (200% of normal button height) */
+}

@@ -23,7 +23,8 @@ const expressionSlice = createSlice({
     compute: (state) => {
       const { expression } = state
 
-      const result = eval(expression.replace(/[^-()\d/*+.]/g, ""))
+      const result = eval(expression.replace(/[^-()\d/*+]/g, ""))
+
       if (result) {
         const power = Math.pow(10, PRECISION)
         const output = Math.round(result * power + Number.EPSILON * power) / power

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Digital";
+  src: url("../../assets/digital.woff2") format("woff2"), url("../../assets/digital.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.display {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border-radius: 5px;
+
+  height: 50px;
+  padding: 10px;
+
+  background-color: darkslategrey;
+}
+
+.display-text {
+  display: inline;
+  
+  font-family: "Digital";
+  font-size: 18px;
+  color: white;
+}
